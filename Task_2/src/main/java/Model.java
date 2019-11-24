@@ -18,16 +18,18 @@ public class Model {
             allAnswers.add(num);
             return false;
         }else if( num < random ){
-            allAnswers.add(num);
+
             if(num > nextMin && num > defaultMin) {
+                allAnswers.add(num);
                 nextMin = num;
                 strangeInput = "";
             }else{ strangeInput = STRANGE_INTERMEDIATE_SMALLER;}
             intermediateAnswer = INTERMEDIATE_BIGGER;
             return true;
         }else{
-            allAnswers.add(num);
+
             if(num < nextMax && num < defaultMax) {
+                allAnswers.add(num);
                 nextMax = num;
                 strangeInput = "";
             }else{ strangeInput = STRANGE_INTERMEDIATE_BIGGER;}
